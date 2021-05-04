@@ -8,3 +8,15 @@
 Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10 завершаем цикл.
 Во втором также необходимо предусмотреть условие, при котором повторение элементов списка будет прекращено.
 """
+import random
+from itertools import cycle
+task_list = []
+result_list = []
+for step in range(0, 10):
+    task_list.append(random.randint(0, 10))
+step = 0
+for value in cycle(task_list):
+    if step == 10:
+        break
+    print(value)
+    step += 1
